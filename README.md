@@ -1,6 +1,8 @@
 # Basic-Memory-Game
 A Basic Memory colour wheel game created using HTML, JS and CSS. It consists of levels and each level is harder than the previous one.
 
+Link: https://namith1003.github.io/Color-Pattern-Memory-Trainer/
+
 ## UI
 
 At the bottom of the screen all the details regarding the level are displayed and how many colours your current level needs to be entered and how many you have entered are also shown.
