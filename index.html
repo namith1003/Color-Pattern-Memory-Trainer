@@ -1,0 +1,54 @@
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes" />
+    <link rel="shortcut icon" sizes="196x196" href="images/gameicon.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="apple-touch-icon-precomposed" href="images/gameicon.png" />
+    <link rel="stylesheet" type="text/css" href="mainPage.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <title>Memory</title>
+    </head>
+<body>
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+        <!-- Title -->
+        <span class="mdl-layout-title">Memory Game</span>
+        <!-- Add spacer, to align navigation to the right -->
+        <div class="mdl-layout-spacer"></div>
+        <div class="mdl-layout-spacer"></div>
+        <button id="stateButton" onclick="startGame();" class="mdl-button mdl-js-button mdl-button--icon">
+            <i id="stateIcon" class="material-icons">play_circle_filled</i>
+        </button>
+        <div class="mdl-layout-spacer"></div>
+        <button onclick="modeButtonClicked();" class="mdl-button mdl-js-button mdl-button--icon">
+            <i id="modeIcon" class="material-icons">touch_app</i>
+        </button>
+
+    </div>
+  </header>
+  <main class="mdl-layout__content">
+    <div class="page-content">
+        <div style=center><img class=big style="position:absolute left:33%" onclick="buttonPress('Blue')" id="TL" src="images/SimonTopLeftDark.png"><img class=big style="position:absolute left:66%" onclick="buttonPress('Green')" id="TR" src="images/SimonTopRightDark.png"></div>
+        <div style=center><img class="blank" src="images/blank.png"><img id="result" class="blank" src="images/blank.png"><img class="blank" src="images/blank.png"></div>
+        <div style=center><img style="left:33%" class=big id="BL" onclick="buttonPress('Yellow')" src="images/SimonBottomLeftDark.png"><img class=big style="right:33%" onclick="buttonPress('Red')"  id="BR" src="images/SimonBottomRightDark.png"></div>
+
+        <div id="output"></div>
+
+        <div id="toast" class="mdl-js-snackbar mdl-snackbar">
+        <div class="mdl-snackbar__text"></div>
+            <button class="mdl-snackbar__action" type="button"></button>
+        </div>
+    </div>
+  </main>
+</div>
+</body>
+
+<script src="gameLogic.js"></script>
+<script src="main.js"></script>
+</html>
